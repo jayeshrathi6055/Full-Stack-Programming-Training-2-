@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment4 (28-05-2021)</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      background-color: #222020;
+    }
+    .container ul {
+      display: flex;
+    }
+    .container ul li {
+      list-style: none;
+      padding: 10px 5px;
+    }
+    .container ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 12px;
+    }
+    .container ul li a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+    }
+
+    .container2 {
+      display: flex;
+      flex-direction: column;
+      background-color: #000000b8;
+    }
+
+    .container3,
+    .container5 {
+      display: flex;
+      padding-left: 60px;
+    }
+
+    .container4 {
+      border: 1px solid black;
+      margin: 30px 0px;
+      margin-right: 17px;
+      display: flex;
+      flex-direction: column;
+    }
+    .container4 p {
+      border-top: 1px solid black;
+      width: 298px;
+      color: white;
+    }
+
+    .container4 img {
+      width: 300px;
+      height: 200px;
+    }
+
+    @media screen and (max-width: 1050px) {
+      .container3,
+      .container5 {
+        padding-left: 20px;
+      }
+    }
+    @media screen and (max-width: 975px) {
+      .container3,
+      .container5 {
+        padding-left: 5px;
+      }
+    }
+    @media screen and (max-width: 950px) {
+      .container3,
+      .container5 {
+        flex-direction: column;
+        align-items: center;
+      }
+      .container4 {
+        margin-right: 0px;
+        margin-bottom: 10px;
+      }
+      .container4 img {
+        width: auto;
+        height: auto;
+      }
+      .container4 p {
+        width: 500px;
+      }
+    }
+    @media screen and (max-width: 530px) {
+      .container4 img {
+        width: 300px;
+        height: 200px;
+      }
+      .container4 p {
+        width: 298px;
+      }
+    }
+    @media screen and (max-width: 320px) {
+      .container4 img {
+        width: 200px;
+        height: 150px;
+      }
+      .container4 p {
+        width: 200px;
+      }
+      .container ul li {
+        padding: 10px 0px;
+      }
+      .container ul li a {
+        padding: 5px 8px;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="container2">
+      <div class="container3">
+        <div class="container4">
+          <img
+            src="https://images.unsplash.com/photo-1471357674240-e1a485acb3e1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fGJlYWNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+            alt="Star Fish"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed
+            vero assumenda, perferendis ullam dolore reiciendis nobis
+            exercitationem minima! Quisquam, ipsa necessitatibus. Odit ad,
+            veritatis soluta expedita omnis nihil porro voluptatem unde, sunt
+            vero tempora eveniet facilis doloremque enim velit.
+          </p>
+        </div>
+        <div class="container4">
+          <img
+            src="https://images.unsplash.com/photo-1468879823303-35edd50416dc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fGJlYWNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+            alt="Star Fish"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed
+            vero assumenda, perferendis ullam dolore reiciendis nobis
+            exercitationem minima! Quisquam, ipsa necessitatibus. Odit ad,
+            veritatis soluta expedita omnis nihil porro voluptatem unde, sunt
+            vero tempora eveniet facilis doloremque enim velit.
+          </p>
+        </div>
+        <div class="container4">
+          <img
+            src="https://images.unsplash.com/photo-1495899556065-23c001d0a1e3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjF8fGJlYWNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+            alt="Star Fish"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed
+            vero assumenda, perferendis ullam dolore reiciendis nobis
+            exercitationem minima! Quisquam, ipsa necessitatibus. Odit ad,
+            veritatis soluta expedita omnis nihil porro voluptatem unde, sunt
+            vero tempora eveniet facilis doloremque enim velit.
+          </p>
+        </div>
+      </div>
+      <div class="container5">
+        <div class="container4">
+          <img
+            src="https://images.unsplash.com/photo-1474874055390-459bc92357f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fGJlYWNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+            alt="Star Fish"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed
+            vero assumenda, perferendis ullam dolore reiciendis nobis
+            exercitationem minima! Quisquam, ipsa necessitatibus. Odit ad,
+            veritatis soluta expedita omnis nihil porro voluptatem unde, sunt
+            vero tempora eveniet facilis doloremque enim velit.
+          </p>
+        </div>
+        <div class="container4">
+          <img
+            src="https://images.unsplash.com/photo-1506405211174-1c41d7bc9ed6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGJlYWNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+            alt="Star Fish"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed
+            vero assumenda, perferendis ullam dolore reiciendis nobis
+            exercitationem minima! Quisquam, ipsa necessitatibus. Odit ad,
+            veritatis soluta expedita omnis nihil porro voluptatem unde, sunt
+            vero tempora eveniet facilis doloremque enim velit.
+          </p>
+        </div>
+        <div class="container4">
+          <img
+            src="https://images.unsplash.com/photo-1487349384428-12b47aca925e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE0fHxiZWFjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+            alt="Star Fish"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed
+            vero assumenda, perferendis ullam dolore reiciendis nobis
+            exercitationem minima! Quisquam, ipsa necessitatibus. Odit ad,
+            veritatis soluta expedita omnis nihil porro voluptatem unde, sunt
+            vero tempora eveniet facilis doloremque enim velit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
