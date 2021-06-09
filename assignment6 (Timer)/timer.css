@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.container1{
+    display: flex;
+    align-items: center;
+}
+
+.container2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container2 input{
+    width: 33%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+}
+
+.container2 label{
+    width: 36%;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+span{
+    align-self: flex-end;
+    padding-bottom: 3px;
+}
+
+.container3{
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container3 button{
+    padding: 8px 15px;
+    background-color: red;
+    color: white;
+    border-color: red;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#btn{
+    margin: 0px 15px;
+    background-color: blue;
+    border-color: blue;
+}
+
+
+@media screen and (max-width:470px) {
+    .container2 input{
+        width: 50%;
+    }
+    .container2 label{
+        width: 53%;
+    }
+}
+
+@media screen and (max-width:315px) {
+    .container2 input{
+        width: 65%;
+    }
+    .container2 label{
+        width: 73%;
+    }
+}
+@media screen and (max-width:260px) {
+    .container3 button{
+        padding: 8px 10px;
+    }
+    .container3{
+        flex-wrap: wrap;
+    }
+    #btn{
+        padding: 8px 15px;
+    }
+}
