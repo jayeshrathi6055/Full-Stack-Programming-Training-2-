@@ -24,17 +24,9 @@ exports.login = (req, res) => {
     let { email, password } = req.body;
     User.findOne({ email: email }).then((user) => {
         if (password == user.password) {
-            let token = JWT.sign(
-                {
-                    email: user.email,
-                },
-                "assignment7UserSecretKey",
-                {
-                    expiresIn: "1h",
-                }
-            );
+            let token = getToken(user);
             console.log(token);
-            return res.status(200).send(user);
+            return res.status(200).send({user, token});
         }
         return res.status(401).send('Your password is incorrect');
     }).catch((error) => {
@@ -83,18 +75,30 @@ exports.updateUser = (req, res) => {
     let id = mongoose.Types.ObjectId(req.params.id);
     let { firstName, lastName, email } = req.body;
     User.updateOne({ _id: id }, { $set: { firstName, lastName, email } })
-      .then((updateResult) => {
-        if (
-          updateResult.nModified >= 0 &&
-          updateResult.n >= 1 &&
-          updateResult.ok >= 1
-        ) {
-          return res.status(200).send("User was successfully updated.");
+        .then((updateResult) => {
+            if (
+                updateResult.nModified >= 0 &&
+                updateResult.n >= 1 &&
+                updateResult.ok >= 1
+            ) {
+                return res.status(200).send("User was successfully updated.");
+            }
+            return res.status(404).send(`User with ID: ${id} doesn't exist!`);
+        })
+        .catch((error) => {
+            console.error(error);
+            return res.status(500).send("ERROR");
+        });
+};
+
+function getToken(user) {
+    return JWT.sign(
+        {
+            email: user.email,
+        },
+        "assignment7UserSecretKey",
+        {
+            expiresIn: "1h",
         }
-        return res.status(404).send(`User with ID: ${id} doesn't exist!`);
-      })
-      .catch((error) => {
-        console.error(error);
-        return res.status(500).send("ERROR");
-      });
-  };
+    )
+} 

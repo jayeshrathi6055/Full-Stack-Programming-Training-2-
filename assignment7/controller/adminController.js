@@ -30,8 +30,7 @@ exports.adminLogin = (req, res) => {
                     expiresIn: "1h",
                 }
             );
-            console.log(token);
-            return res.status(200).send(user);
+            return res.status(200).send({user,token});
         }
         return res.status(401).send('Your password is incorrect');
     }).catch((error) => {
