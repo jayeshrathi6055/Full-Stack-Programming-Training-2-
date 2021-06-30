@@ -3,27 +3,24 @@ import React from "react";
 export default function Table() {
   let [posts, setPosts] = React.useState([]);
 
-  async function getPosts() {
-    await fetch("http://localhost:8000/allPosts")
+  function getPosts() {
+
+    // fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("http://localhost:8000/allPosts")
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         setPosts(res)
       });
   }
 
   React.useEffect(() => {
-    // fetch('http://localhost:8000/allPosts').then((res)=>res.json()).then((response)=>{
-    //     setPosts(response);
-    //     console.log(response[0]);
-    // });
     getPosts();
   }, []);
-
+ 
   return (
     <div>
       <div>
-        <table>
+        <table border = '1'>
           <thead>
             <tr>
               <td>Sno.</td>
